@@ -43,8 +43,9 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID || secrets.CF_ACCOUNT_ID }}
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
-            echo "::error::CLOUDFLARE_API_TOKEN is missing in GitHub Repository Secrets! Please add CLOUDFLARE_API_TOKEN in GitHub Settings -> Secrets and variables -> Actions."
-            exit 1
+            echo "ℹ️ CLOUDFLARE_API_TOKEN is not configured in GitHub Secrets. Skipping Cloudflare Worker deployment."
+            echo "To enable auto-deploy, add CLOUDFLARE_API_TOKEN in GitHub Repository Settings -> Secrets -> Actions."
+            exit 0
           fi
           echo "🚀 Deploying Worker using Wrangler..."
           npx --yes wrangler deploy

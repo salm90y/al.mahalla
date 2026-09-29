@@ -87,7 +87,7 @@
             android:clipToOutline="true"
             android:padding="2dp">
 
-            <com.ps1.netplay.ui.SquareFrameLayout
+            <com.almahala.netplay.ui.SquareFrameLayout
                 android:id="@+id/game_view_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -111,7 +111,7 @@
                     android:layout_height="match_parent"
                     android:scaleType="fitCenter"
                     android:visibility="gone" />
-            </com.ps1.netplay.ui.SquareFrameLayout>
+            </com.almahala.netplay.ui.SquareFrameLayout>
 
             <!-- Floating Stream Status Badge (Shows for Guest in Remote Play Mode) -->
             <LinearLayout
@@ -200,7 +200,7 @@
                 android:contentDescription="Voice Radio" />
 
             <!-- Mini Vertical Voice Audio Visualizer in the Dock -->
-            <com.ps1.netplay.ui.VerticalVoiceMeterView
+            <com.almahala.netplay.ui.VerticalVoiceMeterView
                 android:id="@+id/voice_meter_dock"
                 android:layout_width="12dp"
                 android:layout_height="22dp"
